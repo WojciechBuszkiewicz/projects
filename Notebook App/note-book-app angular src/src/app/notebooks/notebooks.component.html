@@ -1,0 +1,18 @@
+<div class="wrapper">
+    <div class="notebooks-manager">
+        <div class="buttons-wrapper">
+            <button (click)="addNotebook()">Add Notebook</button>
+            <button (click)="addNote()">Add Note</button>
+        </div>
+        <div class="notebooks-wrapper">
+            <div class="notebook" *ngFor="let notebook of notebooks">
+                <input type="text" [(ngModel)]="notebook.title" (change)="changeNotebook(notebook.id, notebook.title)"
+                    (click)="selectNotebook(notebook)">
+                <span (click)="deleteNotebook(notebook.id)">x</span>
+            </div>
+        </div>
+    </div>
+    <div class="notes-wrapper">
+        <app-note-view *ngFor="let note of notes" [note]="note" (deleteNoteSingal)="deleteNote($event)"></app-note-view>
+    </div>
+</div>

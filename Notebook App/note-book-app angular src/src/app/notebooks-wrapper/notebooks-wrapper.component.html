@@ -1,0 +1,17 @@
+<div class="wrapper">
+    <div class="notebooks-wrapper">
+        <app-add-form (addNotebook)="addNotebook()"></app-add-form>
+        <app-notebook *ngFor="let notebook of notebooks" [title]="notebook.title" [id]="notebook.id"
+            (deleteNotebook)="removeNotebook($event)"></app-notebook>
+    </div>
+    <div class="notes-wrapper">
+        <app-note></app-note>
+        <app-note></app-note>
+        <app-note></app-note>
+        <app-note></app-note>
+        <app-note></app-note>
+        <app-note></app-note>
+
+
+    </div>
+</div>

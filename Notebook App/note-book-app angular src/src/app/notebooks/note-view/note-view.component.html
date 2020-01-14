@@ -1,0 +1,6 @@
+<div class="note-wrapper">
+    <div>
+        <input type="text" (change)="updateNote()" [(ngModel)]="note.title"><span (click)="deleteNote()">x</span>
+    </div>
+    <textarea name="" id="" cols="30" rows="10" (change)="updateNote()" [(ngModel)]="note.text"></textarea>
+</div>

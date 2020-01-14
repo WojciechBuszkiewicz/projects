@@ -1,0 +1,24 @@
+.notebook{
+    display: flex;
+    padding: 5px 10px;
+    border-top: 1px solid black;
+
+}
+
+.notebook input{
+    border: 0;
+    background-color: transparent;
+    width: 40%;
+    min-width: 100px;
+}
+
+.notebook span{
+    display: block;
+    cursor: pointer;
+    margin-left: auto;
+    text-transform: uppercase;
+}
+
+input:focus{
+    outline: none;
+}
